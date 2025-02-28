@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Savoria Restaurant</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sav<span>oria</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Discover our carefully curated selection of dishes</p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="starters">Starters</button>
+                <button class="filter-btn" data-category="main-course">Main Course</button>
+                <button class="filter-btn" data-category="desserts">Desserts</button>
+                <button class="filter-btn" data-category="beverages">Beverages</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-items">
+                <!-- Starters -->
+                <div class="menu-item" data-category="starters">
+                    <img src="images/bruschetta.png" alt="Bruschetta">
+                    <div class="item-info">
+                        <h3>Bruschetta</h3>
+                        <p>Grilled bread with tomatoes, garlic, and fresh basil</p>
+                        <span class="price">$8.99</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="starters">
+                    <img src="images/calamari.png" alt="Calamari">
+                    <div class="item-info">
+                        <h3>Crispy Calamari</h3>
+                        <p>Lightly fried squid with marinara sauce</p>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+                <!-- Main Course -->
+                <div class="menu-item" data-category="main-course">
+                    <img src="images/salmon.png" alt="Grilled Salmon">
+                    <div class="item-info">
+                        <h3>Grilled Salmon</h3>
+                        <p>Fresh salmon with lemon butter sauce and seasonal vegetables</p>
+                        <span class="price">$24.99</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main-course">
+                    <img src="images/steak.png" alt="Beef Steak">
+                    <div class="item-info">
+                        <h3>Ribeye Steak</h3>
+                        <p>12oz ribeye with garlic mashed potatoes</p>
+                        <span class="price">$29.99</span>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <img src="images/tiramisu.png" alt="Tiramisu">
+                    <div class="item-info">
+                        <h3>Tiramisu</h3>
+                        <p>Classic Italian dessert with coffee and mascarpone</p>
+                        <span class="price">$8.99</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <img src="images/chocolate-cake.png" alt="Chocolate Cake">
+                    <div class="item-info">
+                        <h3>Chocolate Lava Cake</h3>
+                        <p>Warm chocolate cake with vanilla ice cream</p>
+                        <span class="price">$9.99</span>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-item" data-category="beverages">
+                    <img src="images/juice.png" alt="Fresh Juice">
+                    <div class="item-info">
+                        <h3>Fresh Fruit Juice</h3>
+                        <p>Choice of orange, apple, or mixed berry</p>
+                        <span class="price">$4.99</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <img src="images/soda.png" alt="Italian Soda">
+                    <div class="item-info">
+                        <h3>Italian Soda</h3>
+                        <p>Sparkling water with your choice of flavored syrup</p>
+                        <span class="price">$3.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>123 Gourmet Street</p>
+                    <p>Culinary District</p>
+                    <p>Food City, FC 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Monday - Friday: 11am - 10pm</p>
+                    <p>Saturday: 10am - 11pm</p>
+                    <p>Sunday: 10am - 9pm</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@savoria.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Savoria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

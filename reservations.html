@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Savoria Restaurant</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sav<span>oria</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reservations.html" class="active">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reservations Header -->
+    <section class="reservations-header">
+        <div class="container">
+            <h1>Make a Reservation</h1>
+            <p>Book your table for an unforgettable dining experience</p>
+        </div>
+    </section>
+
+    <!-- Reservations Content -->
+    <section class="reservations-section">
+        <div class="container">
+            <div class="reservations-content">
+                <!-- Booking Form -->
+                <div class="booking-form">
+                    <h2>Reserve Your Table</h2>
+                    <form id="reservationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6 People</option>
+                                    <option value="7+">7+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="11:30">11:30 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="13:30">1:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="18:30">6:30 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="19:30">7:30 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="20:30">8:30 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Book Table</button>
+                    </form>
+                </div>
+
+                <!-- Reservation Information -->
+                <div class="reservation-info">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Opening Hours</h3>
+                        <p>Lunch: 11:00 AM - 3:00 PM</p>
+                        <p>Dinner: 6:00 PM - 10:00 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Group Bookings</h3>
+                        <p>For parties of 7 or more, please contact us directly:</p>
+                        <p>Phone: (555) 123-4567</p>
+                        <p>Email: reservations@savoria.com</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-concierge-bell"></i>
+                        <h3>Special Events</h3>
+                        <p>We offer private dining and catering services for special occasions.</p>
+                        <a href="contact.html" class="link-btn">Contact Us</a>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Reservation Policy</h3>
+                        <ul>
+                            <li>Reservations required for dinner service</li>
+                            <li>15-minute grace period for late arrivals</li>
+                            <li>Credit card required for parties of 6 or more</li>
+                            <li>24-hour cancellation notice required</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>123 Gourmet Street</p>
+                    <p>Culinary District</p>
+                    <p>Food City, FC 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Monday - Friday: 11am - 10pm</p>
+                    <p>Saturday: 10am - 11pm</p>
+                    <p>Sunday: 10am - 9pm</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@savoria.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Savoria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
