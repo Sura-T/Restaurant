@@ -55,6 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
         .fade-in {
             animation: fadeIn 0.5s ease forwards;
         }
+
+        .feature-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .feature-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
     `;
     document.head.appendChild(style);
 
@@ -166,20 +177,33 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
+                if (entry.target.classList.contains('feature-card')) {
+                    // Add staggered delay for feature cards
+                    setTimeout(() => {
+                        entry.target.classList.add('animate');
+                    }, index * 200); // 200ms delay between each card
+                } else {
+                    entry.target.classList.add('fade-in');
+                }
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     // Observe all sections and cards for animation
-    document.querySelectorAll('section, .feature-card, .menu-item, .team-member, .info-card')
+    document.querySelectorAll('section, .menu-item, .team-member, .info-card')
         .forEach(element => {
             element.classList.add('animate-on-scroll');
             observer.observe(element);
         });
+
+    // Separate observer for feature cards to handle staggered animation
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
+        observer.observe(card);
+    });
 });
 
 // Form submission handlers
